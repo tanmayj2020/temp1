@@ -60,14 +60,14 @@
 
     <!-- MAIN SENSORS -->
 
-    <xacro:sensor_imu parent="base_link" prefix="imu">
+    <!-- <xacro:sensor_imu parent="base_link" prefix="imu">
         <origin xyz="0.0 0.0 0.170" rpy="0 0 0"/>
     </xacro:sensor_imu>
 
 
     <xacro:sensor_gps  parent="base_link" prefix="gps">
         <origin xyz="-0.110 0.0 0.9" rpy="0 0 0"/>
-    </xacro:sensor_gps>
+    </xacro:sensor_gps> -->
 
 
 <!--     <xacro:sensor_hokuyo_utm30lx  parent="base_link" prefix="lidar" >
@@ -83,9 +83,9 @@
         <origin xyz="1.700 0.0 -0.150" rpy="0 -${1.5*M_PI/180.0} 0"/>
     </xacro:VLP-16>
 
-    <xacro:zed_camera parent="base_link" prefix="zed">
+    <!-- <xacro:zed_camera parent="base_link" prefix="zed">
         <origin xyz="-0.110 0.0 0.84" rpy="0 0 0"/> 
-    </xacro:zed_camera>  
+    </xacro:zed_camera>   -->
 
 
 

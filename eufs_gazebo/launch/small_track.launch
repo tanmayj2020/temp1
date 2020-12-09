@@ -19,6 +19,8 @@
   
   <!-- eufs_control launch file -->
   <include file="$(find eufs_gazebo)/launch/eufs_control.launch"/>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find eufs_description)/config/rviz/visualisator.rviz" />
+
 
   <!-- Gazebo -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -37,16 +39,6 @@
   <node args="-urdf -model eufs -param robot_description 
     -x $(arg x) -y $(arg y) -z $(arg z) -R $(arg roll) -P $(arg pitch) -Y $(arg yaw)" 
     name="urdf_spawner" output="screen" pkg="gazebo_ros" respawn="false" type="spawn_model"/>
-  
-  <!-- start robot_control node -->
-  <include file="$(find robot_control)/launch/robot_control.launch"/>
 
-  <!-- Python script to republish ground truth -->
-  <node 
-    name="ground_truth_republisher"
-    pkg="eufs_gazebo"
-    type="ground_truth_republisher.py"
-    output="screen"
-  />
   
 </launch>
